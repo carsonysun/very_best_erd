@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :dishes,
+             :through => :venuebookmarks,
+             :source => :dish
+
   has_many   :venues,
              :through => :venuebookmarks,
              :source => :venue
