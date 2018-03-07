@@ -9,6 +9,10 @@ class Venue < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :venuebookmarks,
+             :source => :user
+
   # Validations
 
 end
